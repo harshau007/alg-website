@@ -56,9 +56,9 @@ const DonationPage = () => {
         <div className="flex flex-col items-center space-y-4">
           <button
             onClick={handleRazorpayPayment}
-            // className="flex items-center justify-center px-6 py-3 bg-[#6a45d1] text-white rounded-md w-full max-w-xs cursor-not-allowed" // Original CSS
+            // className="flex items-center justify-center px-6 py-3 bg-[#6a45d1] hover:bg-[#7554d1] text-white rounded-md w-full max-w-xs" // Original CSS
             className="flex items-center justify-center px-6 py-3 bg-[#6a45d1] text-white rounded-md w-full max-w-xs opacity-50 cursor-not-allowed" // For Testing purpose Disabled
-            disabled
+            // disabled
           >
             <img src="/razorpay.png" alt="Razorpay" className="w-6 h-6 mr-2" />
             Donate with Razorpay
@@ -74,15 +74,47 @@ const DonationPage = () => {
             />
             Donate with Liberapay
           </a>
+          <a
+            href="https://www.buymeacoffee.com/your-username"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center px-6 py-3 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 w-full max-w-xs text-center"
+          >
+            <img
+              src="/bmc.png"
+              alt="Buy Me a Coffee"
+              className="w-6 h-7 mr-2"
+            />
+            Buy Me a Coffee
+          </a>
         </div>
       ) : (
-        <a
-          href="https://liberapay.com/your-username/donate"
-          className="flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 w-full max-w-xs text-center"
-        >
-          <img src="/liberapay.png" alt="Liberapay" className="w-6 h-6 mr-2" />
-          Donate with Liberapay
-        </a>
+        <div className="flex flex-col items-center space-y-4">
+          <a
+            href="https://liberapay.com/your-username/donate"
+            className="flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 w-full max-w-xs text-center"
+          >
+            <img
+              src="/liberapay.png"
+              alt="Liberapay"
+              className="w-6 h-6 mr-2"
+            />
+            Donate with Liberapay
+          </a>
+          <a
+            href="https://www.buymeacoffee.com/your-username"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center px-6 py-3 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 w-full max-w-xs text-center"
+          >
+            <img
+              src="/bmc.png"
+              alt="Buy Me a Coffee"
+              className="w-6 h-6 mr-2"
+            />
+            Buy Me a Coffee
+          </a>
+        </div>
       )}
     </div>
   );
