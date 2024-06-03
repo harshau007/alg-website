@@ -15,8 +15,6 @@ export default function Downloads() {
       <Navbar />
       <Requirements />
       <Flavours />
-
-      <Switch defaultSelected={true} aria-label="Theme edition"></Switch>
       <Footer />
     </section>
   );
