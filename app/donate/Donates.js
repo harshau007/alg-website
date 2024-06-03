@@ -58,7 +58,7 @@ const DonationPage = () => {
             onClick={handleRazorpayPayment}
             // className="flex items-center justify-center px-6 py-3 bg-[#6a45d1] hover:bg-[#7554d1] text-white rounded-md w-full max-w-xs" // Original CSS
             className="flex items-center justify-center px-6 py-3 bg-[#6a45d1] text-white rounded-md w-full max-w-xs opacity-50 cursor-not-allowed" // For Testing purpose Disabled
-            // disabled
+            disabled
           >
             <img src="/razorpay.png" alt="Razorpay" className="w-6 h-6 mr-2" />
             Donate with Razorpay
