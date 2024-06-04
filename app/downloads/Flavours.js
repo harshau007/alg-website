@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 export default function Flavours() {
@@ -9,6 +9,23 @@ export default function Flavours() {
   const [dropdownVisibleKDE, setdropdownVisibleKDE] = useState(false);
   const [dropdownVisibleGNOME, setdropdownVisibleGNOME] = useState(false);
   const [dropdownVisibleXFCE, setdropdownVisibleXFCE] = useState(false);
+
+  const ref = useRef();
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setdropdownVisibleKDE(false);
+        setdropdownVisibleGNOME(false);
+        setdropdownVisibleXFCE(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
 
   const pureIso = {
     kde: {
@@ -111,7 +128,10 @@ export default function Flavours() {
               Download
             </button>
             {dropdownVisibleKDE && (
-              <div className="absolute mt-2 bg-white rounded shadow-lg top-full">
+              <div
+                className="absolute mt-2 bg-white rounded shadow-lg top-full"
+                ref={ref}
+              >
                 <a
                   href={
                     isThemedKDE
@@ -207,7 +227,10 @@ export default function Flavours() {
               Download
             </button>
             {dropdownVisibleGNOME && (
-              <div className="absolute mt-2 bg-white rounded shadow-lg top-full">
+              <div
+                className="absolute mt-2 bg-white rounded shadow-lg top-full"
+                ref={ref}
+              >
                 <a
                   href={
                     isThemedGnome
@@ -289,7 +312,10 @@ export default function Flavours() {
               Download
             </button>
             {dropdownVisibleXFCE && (
-              <div className="absolute mt-2 bg-white rounded shadow-lg top-full">
+              <div
+                className="absolute mt-2 bg-white rounded shadow-lg top-full"
+                ref={ref}
+              >
                 <a
                   href={
                     isThemedXfce
