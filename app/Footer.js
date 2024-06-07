@@ -50,6 +50,15 @@ export default function Footer() {
               alt="Instagram"
             />
           </a>
+          <a href="https://x.com/arkalinuxgui" target="_blank">
+            <Image
+              src="/X.svg"
+              width={24}
+              height={24}
+              className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
+              alt="X"
+            />
+          </a>
         </div>
       </div>
     </div>

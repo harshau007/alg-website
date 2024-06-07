@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { getJobById } from "./JobData";
 import HeadCus from "./head";
@@ -11,6 +11,7 @@ export default function JobDetail() {
   const searchParams = useSearchParams();
   const jobId = searchParams.get("jobId");
   const [job, setJob] = useState(null);
+  const applySectionRef = useRef(null);
 
   useEffect(() => {
     if (jobId) {
@@ -26,6 +27,10 @@ export default function JobDetail() {
       </div>
     );
   }
+
+  const handleApplyClick = () => {
+    applySectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -48,12 +53,12 @@ export default function JobDetail() {
                 </span>
               ))}
             </div>
-            <Link
-              href={`mailto:myemail@email.com`}
-              className="inline-block mt-4 py-3 bg-[#6a45d1] rounded-full px-14 hover:bg-[#7554d1] transition duration-300 text-white"
+            <button
+              onClick={handleApplyClick}
+              className="inline-block mt-4 px-12 py-3 bg-[#6a45d1] font-bold rounded-full hover:bg-[#7554d1] transition duration-300 text-white"
             >
               Apply
-            </Link>
+            </button>
           </div>
         </header>
         <main className="py-10 flex-1 w-full">
@@ -97,6 +102,7 @@ export default function JobDetail() {
                 ))}
               </ul>
               <h2
+                ref={applySectionRef}
                 className="text-4xl font-bold text-white mb-4"
                 style={{ marginTop: "30px" }}
               >
@@ -108,7 +114,7 @@ export default function JobDetail() {
                   href={`mailto:myemail@email.com`}
                   className="text-[#6a45d1] underline hover:text-[#7554d1] transition duration-300"
                 >
-                  myemail@email.com
+                  arkalinuxgui@email.com
                 </a>{" "}
                 and tell us why you're excited to join ALG! To give the team a
                 better understanding of who you are as a whole person, let us
