@@ -2,10 +2,9 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Requirements from "./Requirements";
 import Flavours from "./Flavours";
-import { Switch } from "@nextui-org/switch";
 
 export const metadata = {
-  title: "ALG - Downloads",
+  title: "Downloads | ALG",
   description: "ALG",
 };
 

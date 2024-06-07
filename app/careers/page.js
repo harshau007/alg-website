@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import Career from "./Career";
 
 export const metadata = {
-  title: "ALG - Careers",
+  title: "Careers | ALG",
   description: "ALG",
 };
 
