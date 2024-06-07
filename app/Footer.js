@@ -4,9 +4,16 @@ export default function Footer() {
   return (
     <div className="bg-[#161a1e] text-white py-8">
       <div className="container flex items-center justify-between px-4 mx-auto">
-        <div className="text-[12px] md:text-sm">Copyright &copy; ALG Team</div>
+        <div className="flex items-center space-x-4 md:space-x-8">
+          <div className="text-[12px] md:text-sm">
+            Copyright &copy; ALG Team
+          </div>
+          <div className="text-[12px] md:text-sm opacity-50 hover:opacity-100 transition duration-300">
+            <a href="/careers">Careers</a>
+          </div>
+        </div>
 
-        <div className="flex items-center justify-center space-x-4 md:space-x-8">
+        <div className="flex items-center space-x-4 md:space-x-8">
           <a href="https://github.com/arch-linux-gui" target="_blank">
             <Image
               src="/github.svg"
