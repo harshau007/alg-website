@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "Gaurang Vishwakarma",
+      name: "Demonkillerr",
       role: "Creator",
       image: "https://avatars.githubusercontent.com/u/55846983?v=4",
       github: "https://github.com/demonkillerr",
@@ -12,7 +12,7 @@ export default function AboutPage() {
         "Gaurang is the creator of Arka Linux GUI. With a deep passion for Linux and open-source software, he aims to make Arch Linux more accessible to users around the world.",
     },
     {
-      name: "Akash Dubey",
+      name: "Aasamaan",
       role: "Core Team - Developer",
       image: "https://avatars.githubusercontent.com/u/101584901?v=4",
       github: "https://github.com/Akash6222",
@@ -20,7 +20,7 @@ export default function AboutPage() {
         "A dedicated developer focused on improving the user experience and functionality.",
     },
     {
-      name: "Harsh Upadhyay",
+      name: "SoloLeveler",
       role: "Core Team - Developer",
       image: "https://avatars.githubusercontent.com/u/49197635?v=4",
       github: "https://github.com/harshau007",
