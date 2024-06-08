@@ -3,7 +3,7 @@ import React from "react";
 const TutorialPage = () => {
   return (
     <div className="flex flex-col items-center p-8 bg-[#161a1e] text-white">
-      <h1 className="text-6xl font-bold mb-10 mt-[10rem] text-center">
+      <h1 className="text-4xl font-bold mb-10 mt-[10rem] text-center">
         Installation Videos
       </h1>
 
