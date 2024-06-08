@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { getUserCountry } from "../lib/getUserCountry";
 import Razorpay from "razorpay";
+import Image from "next/image";
 
 const DonationPage = () => {
   const [country, setCountry] = useState("");
@@ -60,16 +61,24 @@ const DonationPage = () => {
             className="flex items-center justify-center px-6 py-3 bg-[#6a45d1] text-white rounded-md w-full max-w-xs opacity-50 cursor-not-allowed" // For Testing purpose Disabled
             disabled
           >
-            <img src="/razorpay.png" alt="Razorpay" className="w-6 h-6 mr-2" />
+            <Image
+              src="/razorpay.png"
+              alt="Razorpay"
+              width={24}
+              height={24}
+              className="w-6 h-6 mr-2"
+            />
             Donate with Razorpay
           </button>
           <a
             href="https://liberapay.com/your-username/donate"
             className="flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 w-full max-w-xs text-center"
           >
-            <img
+            <Image
               src="/liberapay.png"
               alt="Liberapay"
+              width={24}
+              height={24}
               className="w-6 h-6 mr-2"
             />
             Donate with Liberapay
@@ -80,9 +89,11 @@ const DonationPage = () => {
             rel="noopener noreferrer"
             className="flex items-center justify-center px-6 py-3 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 w-full max-w-xs text-center"
           >
-            <img
+            <Image
               src="/bmc.png"
               alt="Buy Me a Coffee"
+              width={24}
+              height={24}
               className="w-6 h-7 mr-2"
             />
             Buy Me a Coffee
@@ -94,9 +105,11 @@ const DonationPage = () => {
             href="https://liberapay.com/your-username/donate"
             className="flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 w-full max-w-xs text-center"
           >
-            <img
+            <Image
               src="/liberapay.png"
               alt="Liberapay"
+              width={24}
+              height={24}
               className="w-6 h-6 mr-2"
             />
             Donate with Liberapay
@@ -107,9 +120,11 @@ const DonationPage = () => {
             rel="noopener noreferrer"
             className="flex items-center justify-center px-6 py-3 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 w-full max-w-xs text-center"
           >
-            <img
+            <Image
               src="/bmc.png"
               alt="Buy Me a Coffee"
+              width={24}
+              height={24}
               className="w-6 h-6 mr-2"
             />
             Buy Me a Coffee

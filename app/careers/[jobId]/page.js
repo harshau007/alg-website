@@ -111,10 +111,10 @@ export default function JobDetail() {
               <p className="text-white text-lg">
                 Email us at{" "}
                 <a
-                  href={`mailto:myemail@email.com`}
+                  href={`mailto:workwithalgofficial@gmail.com?subject=Application%20For%20${job.title}%20Role`}
                   className="text-[#6a45d1] underline hover:text-[#7554d1] transition duration-300"
                 >
-                  arkalinuxgui@email.com
+                  workwithalgofficial@gmail.com
                 </a>{" "}
                 and tell us why you're excited to join ALG! To give the team a
                 better understanding of who you are as a whole person, let us
