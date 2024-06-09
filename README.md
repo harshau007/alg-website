@@ -1,4 +1,4 @@
-# Custom Linux Distro Website
+# Arka Linux GUI Website
 
 This repository contains the source code for the website of Arka Linux GUI based on Arch Linux. The website is built using Next.js and Tailwind CSS.
 
