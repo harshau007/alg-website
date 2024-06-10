@@ -99,6 +99,7 @@ We would like to thank the following people for their contributions:
 
 - [Harsh Upadhayay](https://github.com/harshau007)
 - [Amir Kamal](https://github.com/0amirk)
+- [Aman Sharma](https://github.com/Amxn-2)
 
 If you have contributed and your name is not listed, please open a pull request to add your name to the list.
 
