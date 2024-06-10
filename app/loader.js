@@ -1,9 +1,9 @@
-"use client"
-import React from 'react';
+"use client";
+import React from "react";
 
 const Loader = () => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
       <div className="loader"></div>
     </div>
   );

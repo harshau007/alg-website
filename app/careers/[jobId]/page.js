@@ -22,8 +22,8 @@ export default function JobDetail() {
 
   if (!job) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <p className="text-gray-700 text-lg">Loading...</p>
+      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <p className="text-lg text-gray-700">Loading...</p>
       </div>
     );
   }
@@ -38,7 +38,7 @@ export default function JobDetail() {
         <HeadCus params={job.title} />
         <Navbar />
         <header className="bg-[#090E0E] shadow w-full">
-          <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+          <div className="px-4 py-6 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
             <h1 className="mt-[9rem] mb-3 text-6xl font-bold text-white">
               {job.title}
             </h1>
@@ -47,7 +47,7 @@ export default function JobDetail() {
               {job.skills.map((skill, index) => (
                 <span
                   key={index}
-                  className="m-1 px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full"
+                  className="px-3 py-1 m-1 text-sm font-semibold text-blue-800 bg-blue-100 rounded-full"
                 >
                   {skill}
                 </span>
@@ -61,54 +61,54 @@ export default function JobDetail() {
             </button>
           </div>
         </header>
-        <main className="py-10 flex-1 w-full">
-          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <main className="flex-1 w-full py-10">
+          <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="bg-[#0F0F12] shadow-md rounded-lg p-6 mb-6 lg:pl-[5rem] lg:pr-[5rem]">
-              <p className="text-lg text-white mb-4">{job.description}</p>
+              <p className="mb-4 text-lg text-white">{job.description}</p>
 
               <h2
-                className="text-4xl font-bold text-gray-900 mb-4 text-white"
+                className="mb-4 text-4xl font-bold text-white"
                 style={{ marginTop: "30px" }}
               >
                 What you'll do at ALG
               </h2>
-              <ul className="list-disc list-inside mb-4 text-lg text-white">
+              <ul className="mb-4 text-lg text-white list-disc list-inside">
                 {job.responsibilities.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
 
               <h2
-                className="text-4xl font-bold text-white mb-4"
+                className="mb-4 text-4xl font-bold text-white"
                 style={{ marginTop: "30px" }}
               >
                 We'd love to hear from you if you have
               </h2>
-              <ul className="list-disc list-inside mb-4 text-lg text-white">
+              <ul className="mb-4 text-lg text-white list-disc list-inside">
                 {job.requirements.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
 
               <h2
-                className="text-4xl font-bold text-white mb-4"
+                className="mb-4 text-4xl font-bold text-white"
                 style={{ marginTop: "30px" }}
               >
                 Nice to have
               </h2>
-              <ul className="list-disc list-inside mb-4 text-lg text-white">
+              <ul className="mb-4 text-lg text-white list-disc list-inside">
                 {job.niceToHave.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
               <h2
                 ref={applySectionRef}
-                className="text-4xl font-bold text-white mb-4"
+                className="mb-4 text-4xl font-bold text-white"
                 style={{ marginTop: "30px" }}
               >
                 How to apply
               </h2>
-              <p className="text-white text-lg">
+              <p className="text-lg text-white">
                 Email us at{" "}
                 <a
                   href={`mailto:workwithalgofficial@gmail.com?subject=Application%20For%20${job.title}%20Role`}
