@@ -50,15 +50,15 @@ const DonationPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#090E0E] text-white p-6">
-      <h1 className="text-4xl sm:text-5xl font-extrabold m-8 text-center">
+    <div className="flex flex-col items-center  justify-center min-h-screen bg-[#161a1e] text-white p-6">
+      <h1 className="m-8 text-4xl font-extrabold text-center md:text-5xl">
         Support Our Cause
       </h1>
       <div className="bg-[#1e2228] p-8 rounded-lg mb-8 shadow-2xl max-w-lg text-center">
-        <h2 className="text-3xl font-semibold mb-6 text-purple-400">
+        <h2 className="mb-6 text-3xl font-semibold text-purple-400">
           Benefits and Perks
         </h2>
-        <ul className="list-none space-y-3 text-lg text-gray-300">
+        <ul className="space-y-3 text-lg text-gray-300 list-none">
           <li className="flex items-center space-x-3">
             <svg
               className="w-8 h-8 text-purple-400 lg:w-6 lg:h-6"
@@ -133,7 +133,7 @@ const DonationPage = () => {
         <div className="flex flex-col items-center space-y-6">
           <button
             onClick={handleRazorpayPayment}
-            className="flex items-center justify-center px-6 py-3 bg-purple-600 text-white rounded-md w-full max-w-xs shadow-lg opacity-50 cursor-not-allowed"
+            className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white bg-purple-600 rounded-md shadow-lg opacity-50 cursor-not-allowed"
             disabled
           >
             <Image
@@ -145,12 +145,12 @@ const DonationPage = () => {
             />
             Donate with Razorpay
           </button>
-          <span className="inline-block bg-gray-200 text-gray-800 px-2 py-1 text-sm opacity-50 rounded-md">
+          <span className="inline-block px-2 py-1 text-sm text-gray-800 bg-gray-200 rounded-md opacity-50">
             Note: Razorpay is currently under construction.
           </span>
           <a
             href="https://liberapay.com/your-username/donate"
-            className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 w-full max-w-xs shadow-lg"
+            className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white bg-green-600 rounded-md shadow-lg hover:bg-green-700"
           >
             <Image
               src="/liberapay.png"
@@ -165,7 +165,7 @@ const DonationPage = () => {
             href="https://www.buymeacoffee.com/your-username"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center px-6 py-3 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 w-full max-w-xs shadow-lg"
+            className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white bg-yellow-500 rounded-md shadow-lg hover:bg-yellow-600"
           >
             <Image
               src="/bmc.png"
@@ -181,7 +181,7 @@ const DonationPage = () => {
         <div className="flex flex-col items-center space-y-6">
           <a
             href="https://liberapay.com/your-username/donate"
-            className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 w-full max-w-xs shadow-lg"
+            className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white bg-green-600 rounded-md shadow-lg hover:bg-green-700"
           >
             <Image
               src="/liberapay.png"
@@ -196,7 +196,7 @@ const DonationPage = () => {
             href="https://www.buymeacoffee.com/your-username"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center px-6 py-3 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 w-full max-w-xs shadow-lg"
+            className="flex items-center justify-center w-full max-w-xs px-6 py-3 text-white bg-yellow-500 rounded-md shadow-lg hover:bg-yellow-600"
           >
             <Image
               src="/bmc.png"

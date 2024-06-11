@@ -3,13 +3,13 @@ import { jobs } from "./[jobId]/JobData";
 
 export default function Career() {
   return (
-    <div className="min-h-screen bg-[#090E0E]">
+    <div className="min-h-screen bg-[#161a1e]">
       <main className="py-[8rem]">
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8 ">
           <div className="px-4 py-6 sm:px-0">
-            <div className="text-white text-center mb-8">
-              <h1 className="text-7xl font-bold m-4">Join ALG</h1>
-              <p className="opacity-50 font-bold text-xl">
+            <div className="mb-8 text-center text-white">
+              <h1 className="m-4 font-bold text-7xl">Join ALG</h1>
+              <p className="text-xl font-bold opacity-50">
                 Help us build Fast and Offline Graphical installer for Arch
                 Linux
               </p>

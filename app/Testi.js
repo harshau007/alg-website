@@ -2,15 +2,24 @@
 import React, { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { color } from "framer-motion";
 
+import Loader from "./loader";
+import HandleYT from "./HandleYT";
+import { Suspense } from "react";
+
 const videos = [
-  "https://www.youtube-nocookie.com/embed/oPzSUczBT3I?si=VCmgDKNLLS9Br5r3",
-  "https://www.youtube-nocookie.com/embed/cxj1SPJihpA?si=VquT1aSsUjDTyd66",
-  "https://www.youtube-nocookie.com/embed/zQLknMv4sOs?si=TkFyqDex0nfHxOhH",
-  "https://www.youtube-nocookie.com/embed/sBgbEVbAT2g?si=2ZayTt99MgeAWJFA",
-  "https://www.youtube-nocookie.com/embed/e0U7VY5CkwQ?si=ChIHwo98dhcoOCk2",
+  // "https://www.youtube-nocookie.com/embed/oPzSUczBT3I?si=VCmgDKNLLS9Br5r3",
+  // "https://www.youtube-nocookie.com/embed/cxj1SPJihpA?si=VquT1aSsUjDTyd66",
+  // "https://www.youtube-nocookie.com/embed/zQLknMv4sOs?si=TkFyqDex0nfHxOhH",
+  // "https://www.youtube-nocookie.com/embed/sBgbEVbAT2g?si=2ZayTt99MgeAWJFA",
+  // "https://www.youtube-nocookie.com/embed/e0U7VY5CkwQ?si=ChIHwo98dhcoOCk2",
+  "oPzSUczBT3I",
+  "cxj1SPJihpA",
+  "zQLknMv4sOs",
+  "sBgbEVbAT2g",
+  "e0U7VY5CkwQ",
 ];
 
 export default function Testi() {
@@ -20,7 +29,7 @@ export default function Testi() {
     const isMobileDevice = window.innerWidth <= 768;
 
     setPerPage(isMobileDevice ? 1 : 2);
-    
+
     const handleResize = () => {
       setPerPage(window.innerWidth <= 768 ? 1 : 2);
     };
@@ -39,30 +48,26 @@ export default function Testi() {
         <div className="bg-[#f6f5f5] px-4 py-8 md:p-12 rounded-2xl w-full">
           <Splide
             options={{
-              type: 'loop',
+              type: "loop",
               moveBy: 1,
-              autoplay: true,
+              autoplay: false,
               interval: 3000,
               arrows: true,
               drag: false,
               pagination: true,
-              gap: '1em',
+              gap: "1em",
               perPage: perPage,
             }}
           >
             {videos.map((video, index) => (
               <SplideSlide key={index}>
-                <div
-                  className="mb-7 flex items-center justify-center"
-                >
-                  <iframe
-                    src={video}
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    className="w-full h-[300px] md:h-[500px] rounded-2xl"
-                  ></iframe>
+                <div className="w-full h-[300px] md:h-[500px] rounded-2xl mb-12">
+                  <Suspense fallback={<Loader />}>
+                    <HandleYT
+                      videoId={video}
+                      className="w-full h-[300px] md:h-[500px] rounded-2xl"
+                    />
+                  </Suspense>
                 </div>
               </SplideSlide>
             ))}
