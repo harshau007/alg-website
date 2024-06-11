@@ -5,8 +5,8 @@ import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { color } from "framer-motion";
 
-import Loader from "./loader";
-import HandleYT from "./HandleYT";
+import Loader from "./lib/loader";
+import HandleYT from "./lib/HandleYT";
 import { Suspense } from "react";
 
 const videos = [

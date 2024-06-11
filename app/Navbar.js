@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import Modal from "./Modal";
+import Modal from "./lib/Modal";
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);

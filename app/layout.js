@@ -4,7 +4,7 @@ import "./globals.css";
 import "../public/alg-logo.png";
 import { ScrollProvider } from "./scrollContext";
 import { useEffect, useState } from "react";
-import Loader from "./loader";
+import Loader from "./lib/loader";
 import Layout from "./components/Layout";
 
 const poppins = Poppins({
