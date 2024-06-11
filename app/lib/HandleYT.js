@@ -29,7 +29,7 @@ const HandleYT = ({ videoId }) => {
   return (
     <div>
       {loading ? (
-        <div className="flex items-center justify-center w-full h-[300px] md:h-[500px] rounded-2xl bg-white bg-opacity-25">
+        <div className="flex items-center justify-center w-full h-[300px] md:h-[500px] rounded-2xl bg-white bg-opacity-0">
           <div className="loader"></div>
         </div>
       ) : videoExists ? (
