@@ -1,8 +1,10 @@
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AboutPage() {
-  const teamMembers = [
+const AboutPage = () => {
+  const [teamMembers, setTeamMembers] = useState([
     {
       name: "Demonkillerr",
       role: "Creator",
@@ -27,7 +29,33 @@ export default function AboutPage() {
       description:
         "A dedicated developer focused on improving the user experience and functionality.",
     },
-  ];
+  ]);
+
+  useEffect(() => {
+    const fetchGitHubProfiles = async () => {
+      const updatedMembers = await Promise.all(
+        teamMembers.map(async (member) => {
+          try {
+            const response = await fetch(
+              `https://api.github.com/users/${member.github.split("/").pop()}`
+            );
+            const data = await response.json();
+            return { ...member, image: data.avatar_url };
+          } catch (error) {
+            console.error(
+              `Error fetching GitHub profile for ${member.name}:`,
+              error
+            );
+            return member;
+          }
+        })
+      );
+      setTeamMembers(updatedMembers);
+    };
+
+    fetchGitHubProfiles();
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#161a1e] text-white py-16 px-6">
       <div className="container mx-auto">
@@ -122,4 +150,6 @@ export default function AboutPage() {
       </div>
     </div>
   );
-}
+};
+
+export default AboutPage;
