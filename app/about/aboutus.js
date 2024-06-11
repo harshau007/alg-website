@@ -6,25 +6,25 @@ import Link from "next/link";
 const AboutPage = () => {
   const [teamMembers, setTeamMembers] = useState([
     {
-      name: "Demonkillerr",
+      name: "",
       role: "Creator",
-      image: "https://avatars.githubusercontent.com/u/55846983?v=4",
+      image: "",
       github: "https://github.com/demonkillerr",
       description:
         "Gaurang is the creator of Arka Linux GUI. With a deep passion for Linux and open-source software, he aims to make Arch Linux more accessible to users around the world.",
     },
     {
-      name: "Aasamaan",
+      name: "",
       role: "Core Team - Developer",
-      image: "https://avatars.githubusercontent.com/u/101584901?v=4",
+      image: "",
       github: "https://github.com/Akash6222",
       description:
         "A dedicated developer focused on improving the user experience and functionality.",
     },
     {
-      name: "SoloLeveler",
+      name: "",
       role: "Core Team - Developer",
-      image: "https://avatars.githubusercontent.com/u/49197635?v=4",
+      image: "",
       github: "https://github.com/harshau007",
       description:
         "A dedicated developer focused on improving the user experience and functionality.",
@@ -40,7 +40,7 @@ const AboutPage = () => {
               `https://api.github.com/users/${member.github.split("/").pop()}`
             );
             const data = await response.json();
-            return { ...member, image: data.avatar_url };
+            return { ...member, image: data.avatar_url, name: data.login };
           } catch (error) {
             console.error(
               `Error fetching GitHub profile for ${member.name}:`,
@@ -130,14 +130,14 @@ const AboutPage = () => {
                 <div className="flex flex-col h-full justify-between">
                   <div>
                     <Image
-                      src={member.image}
+                      src={member.image || "/alg-logo.png"}
                       alt={member.name}
                       width={150}
                       height={150}
                       className="rounded-full mx-auto mb-4"
                     />
                     <h3 className="text-2xl font-semibold mb-2">
-                      {member.name}
+                      {member.name || "---------"}
                     </h3>
                     <p className="text-gray-400">{member.role}</p>
                   </div>
