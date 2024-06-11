@@ -1,27 +1,28 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="bg-[#161a1e] text-white py-8">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 mb-4 md:mb-0">
+      <div className="container px-4 mx-auto max-w-7xl">
+        <div className="flex flex-col items-center justify-between md:flex-row">
+          <div className="flex flex-col items-center mb-4 space-y-4 md:flex-row md:space-y-0 md:space-x-8 md:mb-0">
             <div className="text-[12px] md:text-sm">
               &copy; {new Date().getFullYear()} ALG Team
             </div>
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8">
-              <a
-                href="/careers"
+            <div className="flex flex-col items-center space-y-2 md:flex-row md:space-y-0 md:space-x-8">
+              <Link
+                href="/JoinUs"
                 className="text-[12px] md:text-sm opacity-70 hover:opacity-100 transition-opacity duration-300"
               >
-                Careers
-              </a>
-              <a
+                Join Us
+              </Link>
+              <Link
                 href="/about"
                 className="text-[12px] md:text-sm opacity-70 hover:opacity-100 transition-opacity duration-300"
               >
                 About Us
-              </a>
+              </Link>
             </div>
           </div>
 

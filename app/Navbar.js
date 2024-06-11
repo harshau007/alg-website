@@ -14,10 +14,10 @@ export default function Navbar() {
     <section className="absolute w-full mt-8">
       {navOpen && (
         <Modal onClose={burgerClick}>
-          <div className="flex flex-col text-lg font-bold items-center justify-center gap-4">
-            <a href="/tutorials" className="hover:text-[#6a45d1]">
+          <div className="flex flex-col items-center justify-center gap-4 text-lg font-bold">
+            <Link href="/tutorials" className="hover:text-[#6a45d1]">
               Tutorials
-            </a>
+            </Link>
             <a
               href="https://discord.com/invite/NgAFEw9Tkf"
               className="hover:text-[#6a45d1]"
@@ -76,10 +76,10 @@ export default function Navbar() {
           >
             <Image src="/hamburger.svg" height={30} width={30} alt="Nothing" />
           </button>
-          <div className="items-center text-lg font-bold hidden gap-4 md:flex">
-            <a href="/tutorials" className="hover:text-[#6a45d1]">
+          <div className="items-center hidden gap-4 text-lg font-bold md:flex">
+            <Link href="/tutorials" className="hover:text-[#6a45d1]">
               Tutorials
-            </a>
+            </Link>
             <a
               href="https://discord.com/invite/NgAFEw9Tkf"
               className="hover:text-[#6a45d1]"
