@@ -1,3 +1,4 @@
+import React from "react";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -8,7 +9,6 @@ export const metadata = {
   title: "Arka Linux GUI",
   description: "Arka Linux GUI",
 };
-
 
 export default function Home() {
   return (

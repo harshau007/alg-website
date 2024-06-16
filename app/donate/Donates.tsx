@@ -30,7 +30,7 @@ const DonationPage = () => {
     const options = {
       amount: (amount * 100).toString(),
       currency,
-      receipt: shortid.generate(),
+      // receipt: shortid.generate(),
       payment_capture,
     };
     const rzp = new Razorpay({
@@ -38,12 +38,12 @@ const DonationPage = () => {
       key_secret: process.env.NEXT_PUBLIC_RAZORPAY_KEY_SEC,
     });
     try {
-      const response = await rzp.orders.create(options);
-      res.status(200).json({
-        id: response.id,
-        currency: response.currency,
-        amount: response.amount,
-      });
+      // const response = await rzp.orders.create(options);
+      // response.status(200).json({
+      //   id: response.id,
+      //   currency: response.currency,
+      //   amount: response.amount,
+      // });
     } catch (err) {
       console.log(err);
     }

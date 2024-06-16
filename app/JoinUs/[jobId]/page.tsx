@@ -1,10 +1,11 @@
 "use client";
+import React from "react";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { getJobById } from "./JobData";
 import HeadCus from "./head";
-import Navbar from "@/app/Navbar";
-import Footer from "@/app/Footer";
+import Navbar from "../../Navbar";
+import Footer from "../../Footer";
 
 export default function JobDetail() {
   const searchParams = useSearchParams();

@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -11,10 +12,13 @@ export default function Navbar() {
   };
 
   return (
-    <section className="absolute w-full mt-8">
+    <section className="absolute w-full mt-8 text-black text-lg">
       {navOpen && (
         <Modal onClose={burgerClick}>
-          <div className="flex flex-col items-center justify-center gap-4 text-lg font-bold">
+          <div className="flex flex-col items-center justify-center gap-4 font-bold">
+            <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
+              Docs
+            </Link>
             <Link href="/tutorials" className="hover:text-[#6a45d1]">
               Tutorials
             </Link>
@@ -77,6 +81,9 @@ export default function Navbar() {
             <Image src="/hamburger.svg" height={30} width={30} alt="Nothing" />
           </button>
           <div className="items-center hidden gap-4 text-lg font-bold md:flex">
+            <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
+              Docs
+            </Link>
             <Link href="/tutorials" className="hover:text-[#6a45d1]">
               Tutorials
             </Link>

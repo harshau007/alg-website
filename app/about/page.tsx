@@ -1,10 +1,10 @@
+import React from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import Requirements from "./Requirements";
-import Flavours from "./Flavours";
+import AboutPage from "./aboutus";
 
 export const metadata = {
-  title: "Downloads | ALG",
+  title: "About Us | ALG",
   description: "ALG",
 };
 
@@ -12,8 +12,7 @@ export default function Downloads() {
   return (
     <section className="relative">
       <Navbar />
-      <Requirements />
-      <Flavours />
+      <AboutPage />
       <Footer />
     </section>
   );

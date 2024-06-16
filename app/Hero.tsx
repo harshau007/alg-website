@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useScroll } from "./scrollContext";
 import Image from "next/image";
 

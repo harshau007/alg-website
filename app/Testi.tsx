@@ -63,10 +63,7 @@ export default function Testi() {
               <SplideSlide key={index}>
                 <div className="w-full h-[300px] md:h-[500px] rounded-2xl mb-12">
                   <Suspense fallback={<Loader />}>
-                    <HandleYT
-                      videoId={video}
-                      className="w-full h-[300px] md:h-[500px] rounded-2xl"
-                    />
+                    <HandleYT videoId={video} />
                   </Suspense>
                 </div>
               </SplideSlide>

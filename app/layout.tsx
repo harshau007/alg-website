@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import "../public/alg-logo.png";
@@ -6,6 +7,7 @@ import { ScrollProvider } from "./scrollContext";
 import { useEffect, useState } from "react";
 import Loader from "./lib/loader";
 import Layout from "./components/Layout";
+import { RootProvider } from "fumadocs-ui/provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -33,10 +35,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ScrollProvider>
-          {loading && <Loader />}
-          <Layout>{children}</Layout>
-        </ScrollProvider>
+        <RootProvider
+          search={{
+            hotKey: [
+              {
+                display: "K",
+                key: "k",
+              },
+            ],
+          }}
+        >
+          <ScrollProvider>
+            {loading && <Loader />}
+            <Layout>{children}</Layout>
+          </ScrollProvider>
+        </RootProvider>
         <div id="modal-root"></div>
       </body>
     </html>

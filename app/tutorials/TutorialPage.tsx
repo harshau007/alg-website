@@ -124,10 +124,7 @@ const TutorialPage = () => {
           </div>
           <div className="md:w-1/2">
             <Suspense fallback={<Loader />}>
-              <HandleYT
-                videoId={video.url}
-                className="w-full h-[300px] md:h-[500px] rounded-2xl"
-              />
+              <HandleYT videoId={video.url} />
             </Suspense>
           </div>
         </div>
@@ -156,10 +153,7 @@ const TutorialPage = () => {
           </div>
           <div className="md:w-1/2">
             <Suspense fallback={<Loader />}>
-              <HandleYT
-                videoId={video.url}
-                className="w-full h-[300px] md:h-[500px] rounded-2xl"
-              />
+              <HandleYT videoId={video.url} />
             </Suspense>
           </div>
         </div>
@@ -186,10 +180,7 @@ const TutorialPage = () => {
           </div>
           <div className="md:w-1/2">
             <Suspense fallback={<Loader />}>
-              <HandleYT
-                videoId={video.url}
-                className="w-full h-[300px] md:h-[500px] rounded-2xl"
-              />
+              <HandleYT videoId={video.url} />
             </Suspense>
           </div>
         </div>
@@ -217,10 +208,7 @@ const TutorialPage = () => {
           </div>
           <div className="md:w-1/2">
             <Suspense fallback={<Loader />}>
-              <HandleYT
-                videoId={video.url}
-                className="w-full h-[300px] md:h-[500px] rounded-2xl"
-              />
+              <HandleYT videoId={video.url} />
             </Suspense>
           </div>
         </div>

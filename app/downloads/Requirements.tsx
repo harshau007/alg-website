@@ -1,3 +1,4 @@
+import React from "react";
 export default function Requirements() {
   return (
     <section className="bg-[#161a1e] px-6 pt-36 sm:px-12 md:px-20 md:pb-12 lg:px-28">
