@@ -1,5 +1,5 @@
 import JobCard from "../components/JobCard";
-import { jobs } from "../joinus/[[...slug]]/JobData";
+import { jobs } from "./[jobId]/JobData";
 
 export default function Career() {
   return (
