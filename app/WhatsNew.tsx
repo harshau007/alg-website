@@ -29,7 +29,7 @@ export default function WhatsNew() {
               alt="Nothing"
             />
             <p className="text-xl font-bold max-w-[400px] text-center p-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Welcome App for Users to navigate through Arka Linux.
             </p>
           </div>
           <div className="flex flex-col items-center justify-center gap-6 rounded-2xl border-opacity-10 border-b-2 border-r-2 border-l-2 border-[#9ca3af]">
@@ -72,14 +72,14 @@ export default function WhatsNew() {
             <SplideSlide>
               <div className="flex flex-col items-center justify-center gap-6 rounded-2xl border-opacity-10 border-b-2 border-r-2 border-l-2 border-[#9ca3af]">
                 <Image
-                  src="/xfce.png"
+                  src="/welcome.png"
                   width={500}
                   height={500}
                   className="rounded-xl"
                   alt="Nothing"
                 />
                 <p className="text-xl font-bold max-w-[400px] text-center p-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Welcome App for Users to navigate through Arka Linux.
                 </p>
               </div>
             </SplideSlide>
