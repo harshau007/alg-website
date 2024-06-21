@@ -7,7 +7,7 @@ export const metadata = {
   description: "ALG",
 };
 
-export default function Donate() {
+export default function JoinUsPage() {
   return (
     <section className="relative">
       <Navbar />

@@ -54,7 +54,7 @@ const AboutPage = () => {
     };
 
     fetchGitHubProfiles();
-  }, []);
+  }, [teamMembers]);
 
   return (
     <div className="min-h-screen bg-[#161a1e] text-white py-16 px-6">

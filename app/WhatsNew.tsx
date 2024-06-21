@@ -22,7 +22,7 @@ export default function WhatsNew() {
         <div className="hidden gap-4 md:flex">
           <div className="flex flex-col items-center justify-center gap-6 rounded-2xl border-opacity-10 border-b-2 border-r-2 border-l-2 border-[#9ca3af]">
             <Image
-              src="/xfce.png"
+              src="/welcome.png"
               width={400}
               height={400}
               className="rounded-xl"
