@@ -4,6 +4,7 @@ const withMDX = createMDX();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: "out",
   basePath: "/alg-website",
   reactStrictMode: true,
   output: "export",
