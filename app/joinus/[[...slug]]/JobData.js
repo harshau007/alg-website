@@ -59,3 +59,7 @@ export const jobs = [
 ];
 
 export const getJobById = (id) => jobs.find((job) => job.id === parseInt(id));
+
+export function getJobs() {
+  return jobs;
+}

@@ -4,7 +4,9 @@ const withMDX = createMDX();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/alg-website",
   reactStrictMode: true,
+  output: "export",
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -17,6 +19,9 @@ const nextConfig = {
         hostname: "raw.githubusercontent.com",
       },
     ],
+  },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
   },
 };
 
