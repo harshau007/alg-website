@@ -19,6 +19,13 @@ export default function Navbar() {
             <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
               Docs
             </Link>
+            <Link
+              href="/blogs"
+              target="_blank"
+              className="hover:text-[#6a45d1]"
+            >
+              Blogs
+            </Link>
             <Link href="/tutorials" className="hover:text-[#6a45d1]">
               Tutorials
             </Link>
@@ -83,6 +90,13 @@ export default function Navbar() {
           <div className="items-center hidden gap-4 text-lg font-bold md:flex">
             <Link href="/docs" target="_blank" className="hover:text-[#6a45d1]">
               Docs
+            </Link>
+            <Link
+              href="/blogs"
+              target="_blank"
+              className="hover:text-[#6a45d1]"
+            >
+              Blogs
             </Link>
             <Link href="/tutorials" className="hover:text-[#6a45d1]">
               Tutorials
