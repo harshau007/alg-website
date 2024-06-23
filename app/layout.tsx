@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import Loader from "./lib/loader";
 import Layout from "./components/Layout";
 import { RootProvider } from "fumadocs-ui/provider";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -45,10 +46,12 @@ export default function RootLayout({ children }) {
             ],
           }}
         >
-          <ScrollProvider>
-            {loading && <Loader />}
-            <Layout>{children}</Layout>
-          </ScrollProvider>
+          <TooltipProvider>
+            <ScrollProvider>
+              {loading && <Loader />}
+              <Layout>{children}</Layout>
+            </ScrollProvider>
+          </TooltipProvider>
         </RootProvider>
         <div id="modal-root"></div>
       </body>
