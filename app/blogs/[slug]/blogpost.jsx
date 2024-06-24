@@ -30,18 +30,18 @@ export default function BlogPost({
             <ChevronLeft size={16} className="mr-2" /> Back
           </Link>
 
-          <div className="p-3 pl-6">
+          <div className="p-3 pl-6 border-2 rounded-lg">
             <h2 className="text-3xl font-bold mb-2">{title}</h2>
             <p className="mb-2">{description}</p>
             <div className="flex items-center text-sm mb-2">
               <span className="mr-4">Author: {author}</span>
             </div>
-            <div className="flex items-center text-sm mb-8">
+            <div className="flex items-center text-sm mb-2">
               <span>Date: {new Date(date).toLocaleDateString()}</span>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row gap-8">
-            <article className="lg:w-3/4 rounded-lg shadow-lg overflow-hidden">
+          <div className="flex flex-col lg:flex-row gap-8 mt-2 gap-4">
+            <article className="lg:w-3/4 rounded-lg shadow-lg border-2 rounded-lg overflow-hidden">
               <div className="p-6">
                 <div className="lg:hidden mb-6">
                   <InlineTOC items={toc} />
