@@ -4,6 +4,7 @@ import { InlineTOC } from "fumadocs-ui/components/inline-toc";
 import { buttonVariants } from "../../components/button";
 import { Control } from "./page.client";
 import { ChevronLeft } from "lucide-react";
+import HeadCus from "../../JoinUs/[jobId]/head";
 
 export default function BlogPost({
   title,
@@ -16,6 +17,7 @@ export default function BlogPost({
 }) {
   return (
     <div className={`min-h-screen`}>
+      <HeadCus params={title} />
       <div className="m-3">
         <main className="container mx-auto px-4 py-8">
           <Link

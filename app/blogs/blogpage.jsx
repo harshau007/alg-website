@@ -31,6 +31,7 @@ export default function BlogPage() {
                   height={48}
                   width={48}
                   className="w-full h-48 object-cover transition-transform transform hover:scale-110"
+                  priority
                 />
               </div>
             )}
