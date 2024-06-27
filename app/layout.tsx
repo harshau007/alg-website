@@ -38,9 +38,13 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
         <RootProvider
           search={{
+            links: [
+              ["Testing", "/docs/testing/newtest"],
+              ["Components", "/docs/test"],
+            ],
             hotKey: [
               {
-                display: "K",
+                display: "Ctrl + k",
                 key: "k",
               },
             ],
