@@ -101,6 +101,7 @@ export default function JobContent({ jobId }) {
               Email us at{" "}
               <a
                 href={`mailto:workwithalgofficial@gmail.com?subject=Application%20For%20${job.title}%20Role`}
+                target="_blank"
                 className="text-[#6a45d1] underline hover:text-[#7554d1] transition duration-300"
               >
                 workwithalgofficial@gmail.com
