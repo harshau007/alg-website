@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { getJobById } from "./JobData";
+import HeadCus from "./head";
 
 export default function JobContent({ jobId }) {
   const [job, setJob] = useState(null);
@@ -24,6 +25,7 @@ export default function JobContent({ jobId }) {
 
   return (
     <>
+      <HeadCus params={job.title} />
       <header className="bg-[#090E0E] shadow w-full">
         <div className="px-4 py-6 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <h1 className="mt-[9rem] mb-3 text-6xl font-bold text-white">
