@@ -12,7 +12,7 @@ const ThankYouPage: React.FC = () => {
     }, 5000);
 
     return () => clearTimeout(redirect);
-  }, []);
+  }, [router]);
   return (
     <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
       <div className="text-center">

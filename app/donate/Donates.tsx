@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { getUserCountry } from "../lib/getUserCountry";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 
 const DonationPage = () => {
   const [country, setCountry] = useState("");
@@ -24,7 +24,7 @@ const DonationPage = () => {
   }, [country, isIndia]);
 
   return (
-    <div className="flex flex-col items-center  justify-center min-h-screen bg-[#161a1e] text-white p-6">
+    <div className="flex flex-col items-center  justify-center min-h-screen bg-[#09090B] text-white p-6">
       <h1 className="m-8 text-4xl font-extrabold text-center md:text-5xl">
         Support Our Cause
       </h1>
